@@ -16,7 +16,7 @@ spec:
         app: prediction-ui
     spec:
       containers:
-      - image: us-central1-docker.pkg.dev/ada2024roman/labrepo/prediction-ui # Docker image name, that we pushed to GCR - use your project id, location, and repository
+      - image: us-central1-docker.pkg.dev/ada2024roman/labrepo/prediction-ui:0.0.1 # Docker image name, that we pushed to GCR - use your project id, location, and repository
         name: prediction-ui
         ports:
         - containerPort: 5000
