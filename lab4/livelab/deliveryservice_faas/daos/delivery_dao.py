@@ -19,7 +19,8 @@ class DeliveryDAO(Base):
     # https: // docs.sqlalchemy.org / en / 14 / orm / backref.html
     status = relationship(StatusDAO.__name__, backref=backref("delivery", uselist=False))
 
-    def __init__(self, customer_id, provider_id, package_id, order_time, delivery_time, status):
+    def __init__(self, id, customer_id, provider_id, package_id, order_time, delivery_time, status):
+        self.id = id
         self.customer_id = customer_id
         self.provider_id = provider_id
         self.package_id = package_id
