@@ -1,6 +1,6 @@
 {
-  "project_id": "your project id",
-  "data_bucket": "your data bucket",
+  "project_id": "ada2024roman",
+  "data_bucket": "adadata_roman",
   "trainset_filename": "training_set.csv",
-  "model_repo": "your project model repo"
+  "model_repo": "labrepo"
 }
