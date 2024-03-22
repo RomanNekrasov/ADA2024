@@ -1,5 +1,5 @@
 from flask import Flask, request
-
+from flask import make_response
 from resources.order import Order, Orders
 
 app = Flask(__name__)
@@ -10,7 +10,9 @@ placeRecord = Order()
 
 @app.route('/orders/<string:id>', methods=['GET'])
 def get_order(id):
-    return placeRecord.get(id)
+    res = make_response(placeRecord.get(id))
+    res.headers.add('Cache-control', "max-age=180, public")
+    return res
 
 
 @app.route('/orders/<string:id>', methods=['PUT'])
