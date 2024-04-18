@@ -1,0 +1,3 @@
+dbt-core==1.5.1
+dbt-bigquery==1.5.9
+chardet
